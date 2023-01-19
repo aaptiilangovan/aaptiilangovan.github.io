@@ -3,24 +3,27 @@
  * @param {*} asArray - which decides whether to return as an Array or as an Object
  * @returns - packArr if asArray is true, else packObj
  */
- function buildCards(asArray=true){
+function buildCards(asArray = true) {
     const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
     const values = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
     const packArr = []
     const packObj = {}
 
-    for(let k=0;k<suits.length;k++){
-        for(let j=0;j<values.length;j++){
-            let packarr=values[j]+"of"+suits[0]
+    // write your code here
+    // for (let i = 0; i < suits.length; i++) {
+    //     packArr.push(i);
+    // }
+    for (let k = 0; k < suits.length; k++) {
+        for (let j = 0; j < values.length; j++) {
+            let packarr = values[j] + " of " + suits[0]
             packArr.push(packarr)
-            packObj[packarr]=j+1
+            packObj[packarr] = j + 1
         }
     }
 
-    
 
 
-    if(!asArray){
+    if (!asArray) {
         return packObj;
     }
     return packArr;
@@ -52,7 +55,7 @@ class Deck {
      */
     shuffle() {
         // write your code here
-        
+
     } //End of shuffle()
 
     /**
@@ -234,14 +237,14 @@ function hit() {
 
 
     // Checking the total of the player cards before dealing new cards
-        // cuteAlert - Player looses the game - as score is more than 21
-        // cuteAlert - Player wins with BlackJack !!!
+    // cuteAlert - Player looses the game - as score is more than 21
+    // cuteAlert - Player wins with BlackJack !!!
 
 
     // Increment extra card count
     extraCnt++;
 }
- 
+
 /**
  * Initial Deal
  */
